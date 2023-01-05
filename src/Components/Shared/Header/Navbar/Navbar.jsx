@@ -1,11 +1,14 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Navbar.css";
+import logo from "../../../../images/logo.png";
+import { FaShoppingCart, FaSearch } from "react-icons/fa";
 
 const Navbar = () => {
   return (
     <>
-      <nav>
+      <nav className="nav-flex">
+        <img className="logo" src={logo} alt="" />
         <ul className="nav-items-flex">
           <li>
             <NavLink to="/">Home</NavLink>
@@ -28,7 +31,24 @@ const Navbar = () => {
           <li>
             <NavLink to="/account">My Account</NavLink>
           </li>
+          <li>
+            <NavLink to="/cart">
+              <FaShoppingCart />
+            </NavLink>
+          </li>
         </ul>
+        <div className="search">
+          <i>
+            <FaSearch />
+          </i>
+          <input
+            type="search"
+            name=""
+            className="search-bar"
+            id=""
+            placeholder="Search..."
+          />
+        </div>
       </nav>
     </>
   );
