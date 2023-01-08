@@ -1,11 +1,12 @@
 import React from "react";
 import Header from "../../Components/Shared/Header/Header";
+import Slider from "../../Components/Slider/Slider";
 
 const Home = () => {
   return (
     <div>
       <Header />
-      <h1>This is Home</h1>
+      <Slider />
     </div>
   );
 };
